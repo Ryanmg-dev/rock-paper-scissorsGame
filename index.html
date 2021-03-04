@@ -7,8 +7,53 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+<body>
+  <main class="body">
+    <div class="bar outline">
+        <ul class="title">
+            <li class="title-item">rock</li>
+            <li class="title-item">paper</li>
+            <li class="title-item">scisors</li>
+        </ul>
+        <div class="bar__score">
+            <span class="bar__score-label">score</span>
+            <h2 class="bar__score-number" id="score-points">0</h2>
+        </div>
+    </div>
 
-  Score
+    <div class="board board--original">
+        <img class="board__bg" src="images/bg-triangle.svg" alt="" srcset="">
+        <div class="board__token board__token-paper">
+            <img src="images/icon-paper.svg" alt="">
+        </div>        
+
+        <div class="board__token board__token-scissors">
+            <img src="images/icon-scissors.svg" alt="">
+        </div>                
+
+        <div class="board__token board__token-scissors">
+            <img src="images/icon-rock.svg" alt="">
+        </div>                   
+
+        <!-- elementor ocultos -->
+        <div class="board__house-place"></div>
+        <!-- fin elementos ocultos -->
+
+        <div class="modal">            
+            <h2 class="modal-result">You lose</h2>
+            <button class="modal__button-restart">
+                play again
+            </button>
+        </div>
+    </div>
+
+    <button class="rules outline" id="rules">
+        rules
+    </button>
+  </main>
+  
+  <!-- Score
   Rules
 
   You Picked
@@ -17,12 +62,13 @@
   You Win
   You Lose
 
-  Play Again
+  Play Again -->
+    
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 45%, 44%); }    
   </style>
 </head>
 <body>
@@ -32,6 +78,7 @@
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+
 </body>
 </html>
