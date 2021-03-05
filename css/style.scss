@@ -1,0 +1,132 @@
+//Colors
+$background: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+$headerOutline: hsl(217, 16%, 45%);
+
+//Text
+$scoreText: hsl(229, 64%, 46%);
+$darkText: hsl(229, 25%, 31%);
+$whileText: hsla(0, 0%, 93%, 0.95);
+
+// Estilos Iniciales
+body {
+    background: $background;
+    height: 100vh;
+    display: flex; 
+    flex-direction: column;         
+}
+
+.header, .footer{
+    height: 100px;    
+}
+
+.header{
+    padding-top: 30px;
+}
+
+.main{
+    flex-grow: 1;    
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.content {
+    width: 85%;
+    margin: 0 auto;    
+}
+//Fin
+
+//Estilos OOC
+.outline {
+    border: 3px solid $headerOutline;
+    border-radius: 8px;
+}
+
+.outline--thin {
+    border: 2px solid $headerOutline;
+    border-radius: 8px;
+}
+
+.text--score {
+    color: $scoreText;
+}
+
+.text--dark {
+    color: $darkText;
+}
+
+.text--while {
+    color: $whileText;
+}
+//Fin
+
+//Estilos Estructurales
+
+//Barra de Puntaje
+.bar {          
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bar__title {
+    list-style: none;
+    font-size: 20px;
+    padding: 20px 0px 20px 25px;
+    max-width: 100px;
+    line-height: 17px;
+}
+
+.bar__score {
+    background: $whileText;
+    margin: 8px 10px 8px 0;
+    padding: 10px 20px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border-radius: 5px;        
+}
+
+.bar__score-label {
+    font-size: 10px;
+    letter-spacing: 2px;    
+}
+
+.bar__score-number {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+//Tablero de Juego
+.board{     
+    position: relative;
+    height: 100%;
+}
+
+.board__bg {        
+    display: block;
+    position: absolute;                 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.board__token {
+    display: none;
+}
+
+//Footer
+.rules {
+    cursor: pointer;
+    background: transparent;
+    display: block;
+    margin: 0px auto 50px auto;    
+    padding: 10px 35px;
+    font-size: 16px;
+    letter-spacing: 2px;    
+}

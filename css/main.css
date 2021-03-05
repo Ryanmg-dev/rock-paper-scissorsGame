@@ -1,0 +1,10 @@
+body, div, h1, h2, span{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+h1, h2, p, span, button {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+}
