@@ -1,5 +1,5 @@
 //Colors
-$background: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+$background: radial-gradient(circle at top center, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 $headerOutline: hsl(217, 16%, 45%);
 
 //Text
@@ -7,6 +7,9 @@ $scoreText: hsl(229, 64%, 46%);
 $darkText: hsl(229, 25%, 31%);
 $whileText: hsla(0, 0%, 93%, 0.95);
 
+//Tokens
+$gradientWhite: hsl(0, 0%, 71%);
+$paper: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
 // Estilos Iniciales
 body {
     background: $background;
@@ -15,15 +18,15 @@ body {
     flex-direction: column;         
 }
 
-.header, .footer{
+.header, .footer {
     height: 100px;    
 }
 
-.header{
+.header {
     padding-top: 30px;
 }
 
-.main{
+.main {
     flex-grow: 1;    
 }
 
@@ -111,13 +114,90 @@ body {
 .board__bg {        
     display: block;
     position: absolute;                 
+    width: 100%;
+    max-width: 300px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .board__token {
-    display: none;
+    cursor: pointer;
+    position: absolute;    
+    width: 115px;
+    height: 115px;        
+    border-radius: 100px;      
+}
+
+.board__token-background {
+    position: relative;
+    width: 100%;    
+    height: 100%;
+    display: flex;
+    align-items: center;    
+    justify-content: center;    
+    background: $whileText;
+    border-radius: inherit;  
+    box-shadow: 0 -6px 0 $gradientWhite;  
+    &::after {
+        content: "";
+        position: absolute;
+        top: -21px; 
+        left: -15px; 
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;                  
+    }
+}
+
+.board__token--paper {
+    &::after{
+        border: 15px solid hsl(230, 89%, 65%);
+        box-shadow: 0 7px 0px hsl(230, 74%, 54%);  
+    }
+}
+
+.board__token--scissors {
+    &::after{
+        border: 15px solid hsl(40, 82%, 55%);
+        box-shadow: 0 6px 0px hsl(39, 97%, 38%); 
+    }
+}
+
+.board__token--rock {
+    &::after{
+        border: 15px solid hsl(349, 69%, 56%);
+        box-shadow: 0 6px 0px hsl(349, 81%, 45%);  
+    }
+}
+
+.board__token-paper {
+    top: 25%;
+    left: 10%;
+    transform: translateY(-25%);      
+}
+
+.board__token-scissors {
+    top: 25%;
+    right: 10%;
+    transform: translateY(-25%);        
+}
+
+.board__token-rock {
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+      
+}
+
+//Estilos Dinamicos Agregadors con JavaScript
+.picked{
+    top: 25%;
+    left: 10%;
+    bottom: unset;
+    right: unset;
+    transform: translateY(-25%);      
+    transition: top 5s, left 5s; 
 }
 
 //Footer
