@@ -89,13 +89,14 @@ body {
 .board {
   position: relative;
   height: 100%;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .board__bg {
   display: block;
   position: absolute;
   width: 100%;
-  max-width: 300px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -130,30 +131,15 @@ body {
   border-radius: inherit;
 }
 
-.board__token--paper::after {
-  border: 15px solid #5671f5;
-  box-shadow: 0 7px 0px #3350e1;
-}
-
-.board__token--scissors::after {
-  border: 15px solid #eaac2e;
-  box-shadow: 0 6px 0px #bf7d03;
-}
-
-.board__token--rock::after {
-  border: 15px solid #dc415e;
-  box-shadow: 0 6px 0px #d01638;
-}
-
 .board__token-paper {
   top: 25%;
-  left: 10%;
+  left: 0%;
   transform: translateY(-25%);
 }
 
 .board__token-scissors {
   top: 25%;
-  right: 10%;
+  right: 0%;
   transform: translateY(-25%);
 }
 
@@ -163,13 +149,49 @@ body {
   transform: translate(-50%, -20%);
 }
 
-.picked {
-  top: 25%;
-  left: 10%;
-  bottom: unset;
-  right: unset;
-  transform: translateY(-25%);
-  transition: top 5s, left 5s;
+.board__token--paper::after {
+  border: 15px solid #5671f5;
+  box-shadow: 0 7px 0px #3350e1;
+}
+
+.board__token--scissors::after {
+  border: 15px solid #eaac2e;
+  box-shadow: 0 7px 0px #bf7d03;
+}
+
+.board__token--rock::after {
+  border: 15px solid #dc415e;
+  box-shadow: 0 7px 0px #d01638;
+}
+
+.picked-scissor {
+  transition: transform 2s;
+  transform: translate(-160%, -25%);
+}
+
+.picked-scissor--paper {
+  transition: transform 2s;
+  transform: translate(80%, 145%);
+}
+
+.picked-scissor--rock {
+  transition: transform 2s;
+  transform: translate(40%, -190%);
+}
+
+.picked-rock {
+  transition: transform 2s;
+  transform: translate(-130%, -190%);
+}
+
+.picked-rock--paper {
+  transition: transform 2s;
+  transform: translate(160%, -25%);
+}
+
+.picked-rock--scissor {
+  transition: transform 2s;
+  transform: translate(-80%, 140%);
 }
 
 .rules {

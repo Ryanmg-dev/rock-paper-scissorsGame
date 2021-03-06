@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,7 +7,7 @@
     
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">    
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css">    
     <link rel="stylesheet" href="css/style.css">
 
     <title>Rock, Paper, Scissors</title>
@@ -31,24 +30,24 @@
         <div class="board board--original">
             <img class="board__bg" src="images/bg-triangle.svg" alt="" srcset="">
 
-            <div class="board__token board__token-paper">
+            <div class="board__token board__token-paper" id="paper">
                 <div class="board__token-background board__token--paper">
                     <img src="images/icon-paper.svg" alt="">
                 </div>                
             </div>
 
-            <div class="board__token board__token-scissors">
+            <div class="board__token board__token-scissors" id="scissor">
                 <div class="board__token-background board__token--scissors">
                     <img src="images/icon-scissors.svg" alt="">
                 </div>                                
             </div>
 
-            <div class="board__token board__token-rock">
+            <div class="board__token board__token-rock" id="rock">
                 <div class="board__token-background board__token--rock">
                     <img src="images/icon-rock.svg" alt="">
                 </div>                                
             </div>
-
+        </div> 
             <!-- elementor ocultos -->
             <div class="board__house-place"></div>
             <!-- fin elementos ocultos -->
@@ -58,8 +57,7 @@
                 <button class="modal__button-restart">
                     play again
                 </button>
-            </div> -->
-        </div>        
+            </div> -->               
     </main>
     
     <footer class="footer content">
@@ -67,33 +65,13 @@
             rules
         </button>
     </footer>
-    <!-- Score
-  Rules
 
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again -->
-
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <!-- <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }    
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  </div>  -->
+
+  <script src="js/picked.js"></script>
 
 </body>
-
 </html>

@@ -8,3 +8,9 @@ h1, h2, p, span, button {
     font-family: 'Barlow Semi Condensed', sans-serif;
     text-transform: uppercase;
 }
+
+/* Keyframes */
+/* @keyframes pick-scissor{
+    0% {right: unset; left: 60%}    
+    100% {right: unset; left: 10%}
+} */

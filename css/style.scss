@@ -9,7 +9,12 @@ $whileText: hsla(0, 0%, 93%, 0.95);
 
 //Tokens
 $gradientWhite: hsl(0, 0%, 71%);
-$paper: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+
+@mixin borderToken ($primary-color, $secundary-color) {
+    border: 15px solid $primary-color;
+    box-shadow: 0 7px 0px $secundary-color;  
+}
+
 // Estilos Iniciales
 body {
     background: $background;
@@ -109,13 +114,14 @@ body {
 .board{     
     position: relative;
     height: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .board__bg {        
     display: block;
     position: absolute;                 
-    width: 100%;
-    max-width: 300px;
+    width: 100%;    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -150,54 +156,71 @@ body {
     }
 }
 
-.board__token--paper {
-    &::after{
-        border: 15px solid hsl(230, 89%, 65%);
-        box-shadow: 0 7px 0px hsl(230, 74%, 54%);  
-    }
-}
-
-.board__token--scissors {
-    &::after{
-        border: 15px solid hsl(40, 82%, 55%);
-        box-shadow: 0 6px 0px hsl(39, 97%, 38%); 
-    }
-}
-
-.board__token--rock {
-    &::after{
-        border: 15px solid hsl(349, 69%, 56%);
-        box-shadow: 0 6px 0px hsl(349, 81%, 45%);  
-    }
-}
-
 .board__token-paper {
     top: 25%;
-    left: 10%;
-    transform: translateY(-25%);      
+    left: 0%;
+    transform: translateY(-25%);          
 }
 
 .board__token-scissors {
     top: 25%;
-    right: 10%;
-    transform: translateY(-25%);        
+    right: 0%;
+    transform: translateY(-25%);       
 }
 
 .board__token-rock {
     bottom: 20%;
     left: 50%;
-    transform: translate(-50%, -20%);
-      
+    transform: translate(-50%, -20%);    
+}
+
+.board__token--paper {
+    &::after{
+        @include borderToken(hsl(230, 89%, 65%), hsl(230, 74%, 54%));
+    }
+}
+
+.board__token--scissors {
+    &::after{
+        @include borderToken(hsl(40, 82%, 55%), hsl(39, 97%, 38%));        
+    }
+}
+
+.board__token--rock {
+    &::after{
+        @include borderToken(hsl(349, 69%, 56%), hsl(349, 81%, 45%));        
+    }
 }
 
 //Estilos Dinamicos Agregadors con JavaScript
-.picked{
-    top: 25%;
-    left: 10%;
-    bottom: unset;
-    right: unset;
-    transform: translateY(-25%);      
-    transition: top 5s, left 5s; 
+.picked-scissor{                           
+    transition: transform 2s; 
+    transform: translate(-160%, -25%);   
+}
+
+.picked-scissor--paper{
+    transition: transform 2s; 
+    transform: translate(80%, 145%);   
+}
+
+.picked-scissor--rock{
+    transition: transform 2s; 
+    transform: translate(40%, -190%);   
+}
+
+.picked-rock{                           
+    transition: transform 2s; 
+    transform: translate(-130%, -190%);   
+}
+
+.picked-rock--paper{                           
+    transition: transform 2s; 
+    transform: translate(160%, -25%);   
+}
+
+.picked-rock--scissor{                           
+    transition: transform 2s; 
+    transform: translate(-80%, 140%);   
 }
 
 //Footer
