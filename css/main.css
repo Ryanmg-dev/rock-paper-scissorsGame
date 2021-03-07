@@ -9,8 +9,6 @@ h1, h2, p, span, button {
     text-transform: uppercase;
 }
 
-/* Keyframes */
-/* @keyframes pick-scissor{
-    0% {right: unset; left: 60%}    
-    100% {right: unset; left: 10%}
-} */
+.hide{
+    display: none !important;
+}

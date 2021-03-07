@@ -1,40 +1,26 @@
-const tokens = [
-    {name: "paper", element: document.getElementById('paper')},
-    {name: "scissor", element: document.getElementById('scissor')},
-    {name: "rock", element: document.getElementById('rock')}
-];
-
-let focus;
-
 //Añadirles un evento click a los tokens 
-tokens.forEach(function (elemento, index, arreglo) {
-    elemento.element.addEventListener('click', 
-    //funcion animar Token    
-    function (){
-        if(elemento.name == 'scissor'){
-            elemento.element.classList.toggle('picked-scissor');            
-            arreglo[0].element.classList.toggle('picked-scissor--paper');
-            arreglo[2].element.classList.toggle('picked-scissor--rock');            
-        }         
-        else if(elemento.name == 'rock'){
-            elemento.element.classList.toggle('picked-rock');            
-            arreglo[0].element.classList.toggle('picked-rock--paper');
-            arreglo[1].element.classList.toggle('picked-rock--scissor');            
-        }else{
-            document.getElementById('step-1').classList.add('novisible');
-        }
-        focus = elemento.element;        
-        setTimeout(  
-            function (){
-                document.getElementById('step-1').classList.add('hide');
-                stepSecond();
-            }                                          
-            ,2200);        
-    });    
+tokens.forEach(function (elemento) {    
+    elemento.element.addEventListener('click', function (){
+        focus = elemento.element;
+        printPicked(focus);                    
+    });         
 });
 
-function stepSecond (){    
-    document.getElementById('step-2').appendChild(focus);
+/*Esta funcion tiene como parametro el elemento que ha sido seleccionado,
+oculta el tablero del step 1 y visibiliza el tablero del step 2 con 
+la ficha seleccionada*/
+function printPicked (focus){ 
+    focus = focus.firstElementChild;
+    document.getElementById('step-1').classList.add('hide');    
     document.getElementById('step-2').classList.remove('hide');    
+            
+    document.getElementById('picked').appendChild(focus);
+    let opcion = HousePickedRandom();
+    console.log(opcion);
+}
+
+function HousePickedRandom (){
+    let random = Math.floor(Math.random()*3)++;
+    return random;
 }
 

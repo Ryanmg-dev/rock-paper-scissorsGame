@@ -27,49 +27,43 @@
     </header>
 
     <main class="main content">        
+        <!-- step one  -->
         <div class="board" id="step-1">
             <img class="board__bg" src="images/bg-triangle.svg" alt="" srcset="">
 
-            <div class="board__token board__token-paper" id="paper">
+            <div class="board__token board__token-first" id="paper">
                 <div class="board__token-background board__token--paper">
                     <img src="images/icon-paper.svg" alt="">
                 </div>                
             </div>
 
-            <div class="board__token board__token-scissors" id="scissor">
+            <div class="board__token board__token-second" id="scissor">
                 <div class="board__token-background board__token--scissors">
                     <img src="images/icon-scissors.svg" alt="">
                 </div>                                
             </div>
 
-            <div class="board__token board__token-rock" id="rock">
+            <div class="board__token board__token-centerbuttom" id="rock">
                 <div class="board__token-background board__token--rock">
                     <img src="images/icon-rock.svg" alt="">
                 </div>                                
             </div>
         </div> 
-
+        <!-- step two -->
         <div class="board hide" id="step-2">
-            <div class="board__token board__token-scissors board__house-place">
+            <div class="board__token board__token-first board__house-place" id="picked">
             </div>
-            <span>
-                You Picked 
-            </span>
-            <span>
-                The house Picked 
-            </span>
-        </div>
-
-            <!-- elementor ocultos -->
-            
-            <!-- fin elementos ocultos -->
-
-            <!-- <div class="modal">
-                <h2 class="modal-result">You lose</h2>
-                <button class="modal__button-restart">
-                    play again
-                </button>
-            </div> -->               
+            <div class="board__token board__token-second board__house-place">
+            </div>
+            <div class="board__label text--while">
+                <span>
+                    You Picked 
+                </span>
+                <span>
+                    The house Picked 
+                </span>
+            </div>            
+        </div>            
     </main>
     
     <footer class="footer content">
@@ -83,6 +77,7 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>  -->
 
+  <script src="js/variables.js"></script>
   <script src="js/picked.js"></script>
 
 </body>
