@@ -21,6 +21,8 @@ const tokenHome = [
 
 //constantes
 const home = document.getElementById('home');
+const outcome = document.getElementById('outcome');
+const retorn = document.getElementById('return');
 
 //variables no constantes
 let focus;

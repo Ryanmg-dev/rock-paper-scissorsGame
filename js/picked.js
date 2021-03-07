@@ -16,7 +16,7 @@ function printPicked (focus){
     document.getElementById('step-2').classList.remove('hide');    
             
     document.getElementById('picked').appendChild(focus);    ;    
-    // homeTokenAnimation();
+    homeTokenAnimation();
 }
 
 function randomNumber (){
@@ -34,7 +34,7 @@ function homeTokenAnimation (){
             nuevoToken.innerHTML = tokenHome[random].child;
             home.appendChild(nuevoToken);            
             contador++;    
-            if(contador == 10){
+            if(contador == 8){
                 clearInterval(intervalo);                
                 compararGanador(tokenPicked, tokenHome[random].name);
             }
@@ -44,12 +44,13 @@ function homeTokenAnimation (){
 
 function compararGanador (tokenPicked, homeToken){    
     if(tokenPicked == homeToken){
-        console.log('empate');
+        outcome.textContent = 'tie';
     }else if(tokenPicked === 'paper' && homeToken === 'rock'
     || tokenPicked === 'scissor' && homeToken === 'paper'
     || tokenPicked === 'rock' && homeToken === 'scissor'){
-        console.log('Ganaste');
+        outcome.textContent = 'you win';
     }else{
-        console.log('Perdiste');
+        outcome.textContent = 'you lose';
     }
+    outcome.parentElement.classList.remove('hide');
 }

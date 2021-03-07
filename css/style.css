@@ -98,6 +98,9 @@ body {
 
 .board__bg {
   width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .board__token {
@@ -175,6 +178,30 @@ body {
 }
 .board__label span:first-child {
   padding-left: 10px;
+}
+
+.board__outcome {
+  width: 80%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.board__outcome-print {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.return {
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  letter-spacing: 3px;
+  padding: 15px 0;
 }
 
 .rules {
