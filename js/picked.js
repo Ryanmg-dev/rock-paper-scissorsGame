@@ -1,7 +1,7 @@
 //Añadirles un evento click a los tokens 
 tokens.forEach(function (elemento) {    
-    elemento.element.addEventListener('click', function (){
-        focus = elemento.element;
+    elemento.element.addEventListener('click', function (){                
+        focus = elemento.element;           
         tokenPicked = elemento.name;
         printPicked(focus);                    
     });         
@@ -15,7 +15,7 @@ function printPicked (focus){
     document.getElementById('step-1').classList.add('hide');    
     document.getElementById('step-2').classList.remove('hide');    
             
-    document.getElementById('picked').appendChild(focus);    ;    
+    picked.appendChild(focus);    
     homeTokenAnimation();
 }
 
@@ -25,8 +25,7 @@ function randomNumber (){
 }
 
 function homeTokenAnimation (){
-    let contador = 0;     
-    let nuevoToken = document.createElement('div');
+    let contador = 0;         
     let intervalo = setInterval(
         function (){            
             let random = randomNumber();                           
@@ -48,7 +47,9 @@ function compararGanador (tokenPicked, homeToken){
     }else if(tokenPicked === 'paper' && homeToken === 'rock'
     || tokenPicked === 'scissor' && homeToken === 'paper'
     || tokenPicked === 'rock' && homeToken === 'scissor'){
-        outcome.textContent = 'you win';
+        outcome.textContent = 'you win';        
+        var calculo = parseInt(score.innerText) + 1;
+        score.textContent = calculo;        
     }else{
         outcome.textContent = 'you lose';
     }

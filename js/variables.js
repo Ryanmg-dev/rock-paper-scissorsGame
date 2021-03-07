@@ -21,9 +21,11 @@ const tokenHome = [
 
 //constantes
 const home = document.getElementById('home');
+const picked = document.getElementById('picked');
 const outcome = document.getElementById('outcome');
-const retorn = document.getElementById('return');
+const score = document.getElementById('score-points');
 
 //variables no constantes
 let focus;
 let tokenPicked; 
+let nuevoToken = document.createElement('div');
