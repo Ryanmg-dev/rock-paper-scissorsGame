@@ -110,6 +110,11 @@ body {
   border-radius: 100px;
 }
 
+.board__house-place {
+  cursor: auto;
+  background: rgba(0, 0, 0, 0.178);
+}
+
 .board__token-background {
   position: relative;
   width: 100%;
@@ -192,6 +197,10 @@ body {
 .picked-rock--scissor {
   transition: transform 2s;
   transform: translate(-80%, 140%);
+}
+
+.hide {
+  display: none;
 }
 
 .rules {

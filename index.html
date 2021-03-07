@@ -27,7 +27,7 @@
     </header>
 
     <main class="main content">        
-        <div class="board board--original">
+        <div class="board" id="step-1">
             <img class="board__bg" src="images/bg-triangle.svg" alt="" srcset="">
 
             <div class="board__token board__token-paper" id="paper">
@@ -48,8 +48,20 @@
                 </div>                                
             </div>
         </div> 
+
+        <div class="board hide" id="step-2">
+            <div class="board__token board__token-scissors board__house-place">
+            </div>
+            <span>
+                You Picked 
+            </span>
+            <span>
+                The house Picked 
+            </span>
+        </div>
+
             <!-- elementor ocultos -->
-            <div class="board__house-place"></div>
+            
             <!-- fin elementos ocultos -->
 
             <!-- <div class="modal">
