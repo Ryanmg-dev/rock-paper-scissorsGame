@@ -286,7 +286,7 @@ body {
   }
 
   .board__outcome {
-    top: 40%;
+    top: 58%;
   }
 }
 @media screen and (min-width: 700px) {
