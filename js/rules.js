@@ -7,7 +7,7 @@ function rulesLightbox (){
     lightbox.innerHTML = '<div class="lightbox__rules">' +
     '<h2 class="text--dark text--bold">Rules</h2>' +
     '<img class="lightbox__rules-bg" src="images/image-rules.svg" alt="Aqui se encuentran las reglas del juego">' +
-    '<img src="images/icon-close.svg" alt="cerrar" id="close"></div>';
+    '<img class="button--cursor" src="images/icon-close.svg" alt="cerrar" id="close"></div>';
 
     document.body.appendChild(lightbox);
     document.getElementById('close').addEventListener('click', function (){

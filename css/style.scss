@@ -76,6 +76,10 @@ body {
     font-size: 30px;
 }
 
+.button--cursor{
+    cursor: pointer;
+}
+
 //Fin
 
 //Estilos Estructurales
@@ -227,19 +231,16 @@ body {
     margin-bottom: 20px;
 }
 
-.return{
-    cursor: pointer;
+.return{    
     width: 100%;
-    font-size: 20px;  
-    outline: none;
+    font-size: 20px;      
     border: none;     
     letter-spacing: 3px; 
     padding: 15px 0;
 }
 
 //Footer
-.rules {
-    cursor: pointer;
+.rules {    
     background: transparent;
     display: block;
     margin: 0px auto 50px auto;    
@@ -270,8 +271,4 @@ body {
 .lightbox__rules-bg{
     width: 75%;
     margin-top: -30px;
-}
-
-#close{
-    cursor: pointer;
 }

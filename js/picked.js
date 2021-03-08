@@ -49,12 +49,14 @@ function compararGanador (tokenPicked, homeToken){
     || tokenPicked === 'scissor' && homeToken === 'paper'
     || tokenPicked === 'rock' && homeToken === 'scissor'){
         outcome.textContent = 'you win';                
-        score.textContent = calculo+1;        
+        score.textContent = calculo+1;  
+        picked.classList.add('token--winner');
     }else{
-        outcome.textContent = 'you lose';
+        outcome.textContent = 'you lose';        
         if(score.textContent>0){
             score.textContent = calculo-1;        
         }        
+        home.classList.add('token--winner');
     }
     outcome.parentElement.classList.remove('hide');
 }

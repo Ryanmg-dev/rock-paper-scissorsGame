@@ -56,6 +56,10 @@ body {
   font-size: 30px;
 }
 
+.button--cursor {
+  cursor: pointer;
+}
+
 .bar {
   display: flex;
   align-items: center;
@@ -199,17 +203,14 @@ body {
 }
 
 .return {
-  cursor: pointer;
   width: 100%;
   font-size: 20px;
-  outline: none;
   border: none;
   letter-spacing: 3px;
   padding: 15px 0;
 }
 
 .rules {
-  cursor: pointer;
   background: transparent;
   display: block;
   margin: 0px auto 50px auto;
@@ -239,10 +240,6 @@ body {
 .lightbox__rules-bg {
   width: 75%;
   margin-top: -30px;
-}
-
-#close {
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

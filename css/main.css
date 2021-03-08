@@ -9,6 +9,28 @@ h1, h2, p, span, button {
     text-transform: uppercase;
 }
 
+button{
+    outline: none;
+}
+
 .hide{
     display: none !important;
+}
+
+/* Animacion Winner */
+@keyframes winner{
+    10%{box-shadow: 0 0 0 40px hsla(0, 0%, 100%, 0.1);}
+    30%{box-shadow: 0 0 0 40px hsla(0, 0%, 100%, 0.1),
+        0 0 0 80px hsla(0, 0%, 100%, 0.08);}
+    50%{box-shadow: 0 0 0 40px hsla(0, 0%, 100%, 0.1),
+        0 0 0 80px hsla(0, 0%, 100%, 0.08),
+        0 0 0 120px hsla(0, 0%, 100%, 0.03);}
+    70%{box-shadow: 0 0 0 40px hsla(0, 0%, 100%, 0.1),
+        0 0 0 80px hsla(0, 0%, 100%, 0.08);}
+    90%{box-shadow: 0 0 0 40px hsla(0, 0%, 100%, 0.1);}
+}
+
+.token--winner{
+    animation-name: winner;
+    animation-duration: 1.5s;    
 }
