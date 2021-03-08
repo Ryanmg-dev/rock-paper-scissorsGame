@@ -71,6 +71,11 @@ body {
 .text--while {
     color: $whileText;
 }
+
+.text--bold{
+    font-size: 30px;
+}
+
 //Fin
 
 //Estilos Estructurales
@@ -241,4 +246,32 @@ body {
     padding: 10px 35px;
     font-size: 16px;
     letter-spacing: 2px;    
+}
+
+//lightbox
+.lightbox{
+    position: absolute;
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background: hsla(0, 0%, 0%, 0.4);    
+}
+
+.lightbox__rules{
+    height: 100%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-around;
+    background: white;       
+}
+
+.lightbox__rules-bg{
+    width: 75%;
+    margin-top: -30px;
+}
+
+#close{
+    cursor: pointer;
 }

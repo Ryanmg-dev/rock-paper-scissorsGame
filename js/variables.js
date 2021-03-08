@@ -24,6 +24,7 @@ const home = document.getElementById('home');
 const picked = document.getElementById('picked');
 const outcome = document.getElementById('outcome');
 const score = document.getElementById('score-points');
+const rules = document.getElementById('rules');
 
 //variables no constantes
 let focus;

@@ -42,16 +42,19 @@ function homeTokenAnimation (){
 }
 
 function compararGanador (tokenPicked, homeToken){    
+    var calculo = parseInt(score.innerText);
     if(tokenPicked == homeToken){
         outcome.textContent = 'tie';
     }else if(tokenPicked === 'paper' && homeToken === 'rock'
     || tokenPicked === 'scissor' && homeToken === 'paper'
     || tokenPicked === 'rock' && homeToken === 'scissor'){
-        outcome.textContent = 'you win';        
-        var calculo = parseInt(score.innerText) + 1;
-        score.textContent = calculo;        
+        outcome.textContent = 'you win';                
+        score.textContent = calculo+1;        
     }else{
         outcome.textContent = 'you lose';
+        if(score.textContent>0){
+            score.textContent = calculo-1;        
+        }        
     }
     outcome.parentElement.classList.remove('hide');
 }
