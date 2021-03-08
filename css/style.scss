@@ -328,6 +328,17 @@ body {
     }
 }
 
+@media screen and (max-width: 400px){
+    .board__outcome {
+        top: 65%;
+    }
+
+    .board__outcome-print {        
+        font-size: 40px;    
+        margin-bottom: 10px;
+    }   
+}
+
 @media screen and (min-width: 700px){    
     .bar__title{
         font-size: 30px;
